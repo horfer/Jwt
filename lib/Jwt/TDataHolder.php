@@ -19,16 +19,6 @@ trait TDataHolder
      */
     private $data = [];
 
-    /**
-     * Constructor.
-     *
-     * @param array $data
-     */
-    public function __construct(array $data = [])
-    {
-        $this->data = $data;
-    }
-
     public function offsetExists($offset)
     {
         return array_key_exists($offset, $this->data);

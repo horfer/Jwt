@@ -16,4 +16,14 @@ final class Header implements \ArrayAccess, \IteratorAggregate, \JsonSerializabl
 {
     use TDataHolder;
     use TDataJsonSerializable;
+	
+    /**
+     * Constructor.
+     *
+     * @param array $data
+     */
+    public function __construct(array $data = [])
+    {
+        $this->data = $data;
+    }
 }

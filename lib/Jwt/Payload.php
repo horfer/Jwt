@@ -20,4 +20,14 @@ final class Payload implements \ArrayAccess, \IteratorAggregate, \JsonSerializab
 {
     use TDataHolder;
     use TDataJsonSerializable;
+	
+    /**
+     * Constructor.
+     *
+     * @param array $data
+     */
+    public function __construct(array $data = [])
+    {
+        $this->data = $data;
+    }
 }
